@@ -5,8 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Garn og Craft forsiden</title>
     <link rel="stylesheet" href="css/global.css">
+
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
+    <header class="navbar">
+
+            <div class="logo">
+                    <a href="#"><img src="billeder/logo.webp" alt="logo"></a>
+            </div>
+            <ul class="links">
+                <li><a href="hero">Garn</a></li>
+                <li><a href="#">Opskrifter</a></li>
+                <li><a href="#">Kits og garnpakker</a></li>
+                <li><a href="#">Kursus og workshops</a></li>
+            </ul>
+            <a href="#" class="action_btn">Get started</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu ">
+           
+              <li><a href="#">Garn</a></li>
+                <li><a href="#">Opskrifter</a></li>
+                <li><a href="#">Kits og garnpakker</a></li>
+                <li><a href="#">Kursus og workshops</a></li>
+
+
+                <li> <a href="#" class="action_btn ">Get started</a></li>
+                
+       
+    </header>
+
+
+    <section id="search_image">  <section id="hero">
+            <h1>welcomme</h1>
+            <p>Lorem, ipsum dolor <br> sit amet  consectetur adipisicing elit. </p>
+        </section>
+</section>
+    <main >main </main>
+    <section id="tilmed">tilmed</section>
+    <footer >footer</footer>
+
+      <script>
+        const toggleBtn=document.querySelector('.toggle_btn')
+         const toggleBtnIcon=document.querySelector('.toggle_btn i')
+          const dropDownMenu=document.querySelector('.dropdown_menu')
+
+
+          toggleBtn.onclick= function()
+          {
+            dropDownMenu.classList.toggle('open')
+           const isOpen= dropDownMenu.classList.contains('open')
+
+           toggleBtnIcon.classList=isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars' 
+
+          }
+    </script>
+
     
 </body>
 </html>
