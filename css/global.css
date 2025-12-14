@@ -120,13 +120,17 @@ input[type=text] { width: 70% ; padding:.9em;/* padding bliver brugt til at give
 border-bottom: solid rgb(163, 194, 156,.7) 1.5px; padding: 10px 0 0 10px;}
 
 /* 4 billeder i content */
-.billeder_forsiden{ display:grid;
-grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-gap:2vw;
+.billeder_forsiden{ 
+   margin-top: 20px;
+   margin-bottom: 20px;
+     display: grid;
+grid-template-columns: repeat(4,1fr);
+grid-column: 100px;
+gap:1.8vw;
 justify-items: center;
 }
 
-.billeder{width:220px; height:200px; padding-left: 10px; border-radius: 50%;}
+.billeder{ width:200px; height:180px; border-radius: 50%;  }
 
       /* Responsiv design */
 
@@ -148,6 +152,12 @@ justify-items: center;
 .dropdown_menu {left:2rem;
 width:unset;}
 
+.billeder_forsiden{ 
+
+grid-template-columns:1fr;
+grid-column: 100px;
+
+}
 
 }
 
