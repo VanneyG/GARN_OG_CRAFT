@@ -7,48 +7,72 @@
     <link rel="stylesheet" href="css/global.css">
 
 
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" >
 
 </head>
 <body>
-    <header class="navbar">
+    <header class="navbar"> <!-- first section -->
 
             <div class="logo">
                     <a href="#"><img src="billeder/logo.webp" alt="logo"></a>
             </div>
+
             <ul class="links">
-                <li><a href="hero">Garn</a></li>
+                <li><a href="#" aria-label=" link til garn">Garn</a></li>
                 <li><a href="#">Opskrifter</a></li>
                 <li><a href="#">Kits og garnpakker</a></li>
                 <li><a href="#">Kursus og workshops</a></li>
             </ul>
-            <a href="#" class="action_btn">Get started</a>
-            <div class="toggle_btn">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </div>
-        <div class="dropdown_menu ">
+
+            <a href="#" class="action_btn"> <h4>Tilmed </h4></a>
+                 <div class="toggle_btn">
+                   <i class="fa-solid fa-bars"></i>
+                 </div>
+     
+        <ul class="dropdown_menu ">
            
               <li><a href="#">Garn</a></li>
                 <li><a href="#">Opskrifter</a></li>
                 <li><a href="#">Kits og garnpakker</a></li>
                 <li><a href="#">Kursus og workshops</a></li>
-
-
-                <li> <a href="#" class="action_btn ">Get started</a></li>
+                <li> <a href="#" class="action_btn2" >Tilmed</a> </li>
                 
+        </ul>
+            
        
-    </header>
+    </header>  
 
 
-    <section id="search_image">  <section id="hero">
-            <h1>welcomme</h1>
-            <p>Lorem, ipsum dolor <br> sit amet  consectetur adipisicing elit. </p>
-        </section>
+    <section id="search_image">  <!-- second section -->
+        
+        
+             <div id="hero">
+                
+                  <h2>Garn og Craft</h2> 
+                  
+                   <h3>Skab sammen, Skab mere </h3>
+
+                   <input type="text" aria-label="søge" id="søge" placeholder="Søg">
+                   
+             </div>
+
+
 </section>
-    <main >main </main>
-    <section id="tilmed">tilmed</section>
-    <footer >footer</footer>
+
+
+    <main > <!-- third section -->
+<div class="text_main">
+<h2> Garn & Craft</h2>
+<p>Et kreativt univers fyldt med lækker garn og håndplukker tilbehør. <br>
+Vi har fokus på kvalitet, bæredygtighed og kærlighed til håndværket-så du kan skabe <br>
+med omtanke, uanset erfaring</p>
+</div>
+
+        </main>
+
+    <section id="tilmed"> <h4>tilmed  </h4></section>  <!-- fourth section -->
+    <footer >footer</footer> <!-- fifth section -->
 
       <script>
         const toggleBtn=document.querySelector('.toggle_btn')
