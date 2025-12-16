@@ -1,31 +1,19 @@
 *{margin: 0;padding: 0;box-sizing: border-box;}
 
-/*grid */
-body{
-    display:grid;
-    grid-template-areas:
-    "navbar"
-    "search_image"
-    "main_content"
-    "tilmed_section"
-    "footer"
-    ;
 
-    grid-template-columns: 1fr;
-    grid-template-rows: 60px 270px 1fr 120px 100px;
+body{
+  
     min-height: 100vh;
-   /* gap:.3em; */
-    margin:5px
+    width:100%;
+ 
 }
 
 
-.navbar{ grid-area: navbar; background-color: #A3C29C;
-position: relative;padding: 0 2rem; margin-bottom: 100PX;
- display: flex; align-items: center;justify-content: space-between; width:100%;margin:0 auto;}
-#search_image{grid-area: search_image; background-image:url(../billeder/search_billede.jpg);}
-main{grid-area:main_content;}
-#tilmed{grid-area: tilmed_section; background-color:#A3C29C;}
-footer{grid-area: footer;}
+
+
+/*------------------------------------*/
+#search_image{ background-image:url(../billeder/search_billede.jpg); height: 450px;}
+#tilmed{ background-color:#A3C29C;}
 
 /*----------------------------------------*/
 
@@ -33,7 +21,11 @@ footer{grid-area: footer;}
 
 .logo img{width:55px; height: auto;}
 
-.navbar{background-color: #A3C29C;}
+.navbar{background-color: #A3C29C;
+/*  position: relative; margin-bottom: 100PX; */
+ display: flex; align-items: center;justify-content: space-between; width:100%; /* margin:0 auto; */}
+
+ 
 
 /*------- navigation */
 
@@ -85,7 +77,7 @@ display: none;}
     backdrop-filter:blur(15px) ;
     border-radius: 10px;
     overflow: hidden;
-  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);  
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
  
 
 }
@@ -121,22 +113,158 @@ border-bottom: solid rgb(163, 194, 156,.7) 1.5px; padding: 10px 0 0 10px;}
 
 /* 4 billeder i content */
 .billeder_forsiden{ 
-   margin-top: 20px;
-   margin-bottom: 20px;
-     display: grid;
-grid-template-columns: repeat(4,1fr);
-grid-column: 100px;
-gap:1.8vw;
-justify-items: center;
+
+
+display:flex;
+flex-wrap: wrap;
+flex-grow: 1;
+justify-content: center;
+align-items: center;
+margin-top: 20px;
+padding-top: 8px;
+
 }
 
 .billeder{ width:200px; height:180px; border-radius: 50%;  }
+.billede_link{position:relative; margin:5px 25px;}
+.text_inside_billede{position: absolute; top:40%;background-color: rgb(163, 194, 156); left:10%;padding:10px; width:160px;
+text-align: center; opacity: 0.7; border-radius: 10px;}
+/*----------------------------*/
+
+/* strikkekit section */
+#strikkekits_sektion{margin-top: 20px; background-color: #A3C29C;}
+
+
+/*  carousel of images with the arrows to the sides. */
+
+.text_ontop_carousel{padding:20px 0 2px 20px;font-size:20px;}
+.text_card_carousel{text-align: center; font-size: 16px;}
+
+.carousel {
+    width: 100%;
+    overflow-x: auto;
+    margin: 3em auto;
+    display: flex;
+    gap: 1em;
+    scroll-behavior: smooth;
+
+    scroll-snap-type: x mandatory;
+    scroll-marker-group: after;
+  
+}
+
+.galery1 {
+    anchor-name: --arrows;
+}
+/*-----------------------------------------*/
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/*---------------------------------------------------------*/
+.carousel::scroll-button(right),
+.carousel::scroll-button(left) {
+    content: ' → ';
+    border: none;
+    background-color:rgb(163, 194, 156,.7);
+    font-family: "pragmatica-extended";
+    font-size:2.5rem;
+    color: rgba(82, 75, 75, 0.616);
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    padding-bottom: 0.1em;
+    cursor: pointer;
+    /*fija la position de las flechas*/
+    position: fixed;
+    position-anchor: --arrows;
+    position-area: right center;
+    translate: -90%;
+}
+
+.galery1::scroll-button(right),
+.galery1::scroll-button(left) {
+    position-anchor: --arrows;
+
+}
+
+/*------------------------------------------------------------*/
+
+
+.carousel::scroll-button(left) {
+    content: '←';
+    position-area: left center;
+    translate: 90%;
+}
+
+/*---------------------------------------------------------*/
+
+.carousel::scroll-button(right):disabled,
+.carousel::scroll-button(left):disabled {
+    opacity: 0.1;
+    cursor: auto;
+}
+
+/*--------------------------------------------------------*/
+
+.card {
+    flex: 0 0 20em;
+    /*flex positiona las tarjetas dando un ancho de 20, causando un overflow
+  que automaticamente genera un scrollbar, por eso debimos desactivar el scrollbar arriba */
+   height: 14.5em;
+   /* background-color: #444c01;*/
+    padding: 1em;
+    /* marco  delgado que puede agrandarse_ da paso entre el background y la imagen */
+  border-radius: 40px; 
+    text-align: center;
+    align-content: center;
+    scroll-snap-align: start;
+    /* va de la mano con el scroll-snap-type del contenedor;*/
+    width: 20em;
+  object-fit:cover;
+}
+
+/*-----------------------------------------------------------*/
+.carousel::scroll-marker-group {
+    display: flex;
+    /* to have themm in a line */
+    justify-content: center;
+    gap: .5em;
+
+    margin-bottom: 50px;
+}
+
+.card::scroll-marker {
+    content: '';
+    /* cards1 es la clase dada a todas las img de la galleria */
+    height: 1em;
+    width: 1em;
+    background-color: silver;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.card::scroll-marker:target-current {
+    background-color: rgb(218, 139, 65)
+}
+
+/*---------------------------------------------------------------*/
+/* button se alt */
+
+.se_alt{
+    width: 250px;background-color: orange;color: black;height: 40px;border-radius: 20px;
+     display:flex;align-items: center;justify-content: center;
+    position: relative;
+justify-self: center;}
+
+
+
 
       /* Responsiv design */
 
 
 
-@media(max-width:992px){
+@media(max-width:992px){  /* 992px */
     .navbar .links, 
     .navbar .action_btn{display: none;}
     .navbar .toggle_btn {
@@ -152,12 +280,9 @@ justify-items: center;
 .dropdown_menu {left:2rem;
 width:unset;}
 
-.billeder_forsiden{ 
 
-grid-template-columns:1fr;
-grid-column: 100px;
 
-}
+
 
 }
 
