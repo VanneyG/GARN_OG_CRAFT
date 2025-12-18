@@ -110,6 +110,7 @@ input[type=text] { width: 70% ; padding:.9em;/* padding bliver brugt til at give
 
 .text_forsiden{width:100%; display: flex; flex-direction: column; justify-content: center;align-items: center;
 border-bottom: solid rgb(163, 194, 156,.7) 1.5px; padding: 10px 0 0 10px;}
+.text_garn{border:none;}
 
 /* 4 billeder i content */
 .billeder_forsiden{ 
@@ -127,34 +128,44 @@ padding-top: 8px;
 
 .billeder{ width:200px; height:180px; border-radius: 50%;  }
 .billede_link{position:relative; margin:5px 25px;}
-.text_inside_billede{position: absolute; top:40%;background-color: rgb(163, 194, 156); left:10%;padding:10px; width:160px;
-text-align: center; opacity: 0.7; border-radius: 10px;}
+.text_inside_billede,
+.text_in_carouselsection{position: absolute; top:40%;background-color: rgb(163, 194, 156); left:10%;padding:10px; width:160px;
+text-align: center; opacity: 0.7; border-radius: 10px;font-weight:bold;color:black;}
 /*----------------------------*/
 
 /* strikkekit section */
-#strikkekits_sektion{margin-top: 20px; background-color: #A3C29C;}
+#strikkekits_sektion,#garn_sektion{margin-top: 20px; background-color: #A3C29C; height:400px;}
 
 
 /*  carousel of images with the arrows to the sides. */
 
-.text_ontop_carousel{padding:20px 0 2px 20px;font-size:20px;}
-.text_card_carousel{text-align: center; font-size: 16px;}
+.text_ontop_carousel{padding:20px 0 2px 20px;font-size:20px;text-align: center;}
+.text_card_carousel{text-align: center; font-size: 16px;z-index: 2;}
+.one_section_of_carousel{position:relative;display:flex;justify-content: center;
+}
+.text_in_carouselsection{left:27%;width:160px;padding:10px;height: fit-content; }
+.text_in_carouselsection2{background-color:rgba(255, 168, 7, 0.9);}
 
 .carousel {
     width: 100%;
     overflow-x: auto;
-    margin: 3em auto;
+    margin: 1em auto;
     display: flex;
     gap: 1em;
     scroll-behavior: smooth;
 
     scroll-snap-type: x mandatory;
     scroll-marker-group: after;
+   
   
 }
 
 .galery1 {
     anchor-name: --arrows;
+}
+
+.galery2 {
+    anchor-name: --flechas;
 }
 /*-----------------------------------------*/
 .carousel::-webkit-scrollbar {
@@ -188,6 +199,12 @@ text-align: center; opacity: 0.7; border-radius: 10px;}
 
 }
 
+.galery2::scroll-button(right),
+.galery2::scroll-button(left) {
+    position-anchor: --flechas;
+
+}
+
 /*------------------------------------------------------------*/
 
 
@@ -211,7 +228,7 @@ text-align: center; opacity: 0.7; border-radius: 10px;}
     flex: 0 0 20em;
     /*flex positiona las tarjetas dando un ancho de 20, causando un overflow
   que automaticamente genera un scrollbar, por eso debimos desactivar el scrollbar arriba */
-   height: 14.5em;
+   height: 13.5em;
    /* background-color: #444c01;*/
     padding: 1em;
     /* marco  delgado que puede agrandarse_ da paso entre el background y la imagen */
@@ -231,7 +248,7 @@ text-align: center; opacity: 0.7; border-radius: 10px;}
     justify-content: center;
     gap: .5em;
 
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .card::scroll-marker {
@@ -241,7 +258,7 @@ text-align: center; opacity: 0.7; border-radius: 10px;}
     width: 1em;
     background-color: silver;
     border-radius: 50%;
-    margin-top: 10px;
+   /* margin-top: 5px;*/
 }
 
 .card::scroll-marker:target-current {
@@ -255,7 +272,8 @@ text-align: center; opacity: 0.7; border-radius: 10px;}
     width: 250px;background-color: orange;color: black;height: 40px;border-radius: 20px;
      display:flex;align-items: center;justify-content: center;
     position: relative;
-justify-self: center;}
+justify-self: center; margin-bottom: 50px;
+}
 
 
 
