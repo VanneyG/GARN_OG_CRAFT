@@ -21,6 +21,7 @@ body{
 
 .logo img{width:55px; height: auto;}
 
+
 .navbar{background-color: #A3C29C; 
 /*  position: relative; margin-bottom: 100PX; */
  display: flex; align-items: center;justify-content: space-between; 
@@ -296,6 +297,30 @@ justify-self: center; margin-bottom: 50px;
   .image_magazine_sektion,.video_sektion{width:300px;padding-top: 20px;display: flex;justify-content: center;}   
  .line_mellem_sektions{border:solid 1px rgb(130, 151, 130); border-top: none; border-left: none; border-right: none; height: 30px; margin-left:35px; margin-right: 35px;}    
  
+/*tilmed sektion */
+#tilmed{display: flex;flex-direction:row; flex-wrap: wrap;justify-content: space-between;align-items: center;}
+.tilmed_sektion{padding-top: 10px;padding-bottom: 10px; }
+.ikon_kasse{display: flex;margin-bottom:18px;}
+.alle_ikon_kasse{flex-grow: 1;flex-basis: 36%; flex-wrap: wrap; }
+.nyhedsbrev{display: flex;justify-content: center;align-items: center;flex-direction: column; flex-grow: 1; margin: 26px; 
+border:solid .5px grey ; border-radius: 7px; text-align: center;}
+.tilmed_besskrivelse{padding-right: 5%;}
+.findos_tittle,.tilmed_sektion ,.tilmed_besskrivelse {padding-left:5%;}
+.findos_ikon{height: 20px; width:auto;padding-right: 15px;}
+.godkend_button{width:60%;margin-top: 15px;height:42px;}
+
+/*footer*/
+footer{display:flex; flex-wrap: wrap;justify-content: space-between;}
+.help{flex-basis: 37%;display: flex; flex-wrap: nowrap;flex-direction: row;margin-top: 25px; flex-grow: 1; margin-bottom: 30px;}
+.social_media_ikon{width:40px; padding-right:9px;}
+.logo_footer{width:75px;}
+.kunderservice{margin-right: 15vw; margin-left:5%;}
+.social_media_ikon_kasse{display: flex;flex-direction: column;text-align: center;margin-left:10% ;margin-right: 20px;flex-grow: 1;
+    margin-top: 25px;
+
+ border:none; }
+
+
 
       /* Responsiv design */
 
@@ -305,7 +330,7 @@ justify-self: center; margin-bottom: 50px;
     .navbar .links li:nth-child(even) ,  .navbar .links li:nth-child(1) , .navbar .links li:nth-child(3) , 
     .navbar .action_btn{display: none;}
 .navbar{position: relative;}
-  .kurv{position: absolute; right: 45px;px;bottom: 21%;}
+  .kurv{position: absolute; right: 45px;bottom: 21%;}
  
 
    
@@ -316,7 +341,7 @@ justify-self: center; margin-bottom: 50px;
 
   .dropdown_menu{display: block;}
 
-  /*for magazine og workshop sektion*/
+ 
 
 
 
