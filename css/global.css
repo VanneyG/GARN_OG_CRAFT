@@ -21,10 +21,12 @@ body{
 
 .logo img{width:55px; height: auto;}
 
-.navbar{background-color: #A3C29C;
+.navbar{background-color: #A3C29C; 
 /*  position: relative; margin-bottom: 100PX; */
- display: flex; align-items: center;justify-content: space-between; width:100%; /* margin:0 auto; */}
-
+ display: flex; align-items: center;justify-content: space-between; 
+ width:100%; /* margin:0 auto; */}
+ 
+.kurv{height:30px ;}
  
 
 /*------- navigation */
@@ -131,6 +133,7 @@ padding-top: 8px;
 .text_inside_billede,
 .text_in_carouselsection{position: absolute; top:40%;background-color: rgb(163, 194, 156); left:10%;padding:10px; width:160px;
 text-align: center; opacity: 0.7; border-radius: 10px;font-weight:bold;color:black;}
+
 /*----------------------------*/
 
 /* strikkekit section */
@@ -275,21 +278,48 @@ text-align: center; opacity: 0.7; border-radius: 10px;font-weight:bold;color:bla
 justify-self: center; margin-bottom: 50px;
 }
 
+/*magazine og workshop sektion */
+
+.magazine_og_workshop_sektion{width:100%;}
+.magazine_sektion,.workshop_sektion{display: flex;
+    flex-direction: row;flex-wrap: wrap;width:100%;justify-content: space-around;
+}
+
+    .beskrivelse_af_magazinesektion,.beskrivelse_af_workshopsektion{width:65vw; position:relative;padding-top: 25px;}
+  
+
+.lille_logo{height:34px;position: absolute;top:32px;left:calc(65vw/2.8 - 110px);}
+.logo_workshop{left:calc(65vw/3 - 110px);}
+.picture_image{width:285px;border-radius:20px;}
 
 
+  .image_magazine_sektion,.video_sektion{width:300px;padding-top: 20px;display: flex;justify-content: center;}   
+ .line_mellem_sektions{border:solid 1px rgb(130, 151, 130); border-top: none; border-left: none; border-right: none; height: 30px; margin-left:35px; margin-right: 35px;}    
+ 
 
       /* Responsiv design */
 
 
 
 @media(max-width:992px){  /* 992px */
-    .navbar .links, 
+    .navbar .links li:nth-child(even) ,  .navbar .links li:nth-child(1) , .navbar .links li:nth-child(3) , 
     .navbar .action_btn{display: none;}
+.navbar{position: relative;}
+  .kurv{position: absolute; right: 45px;px;bottom: 21%;}
+ 
+
+   
+    
     .navbar .toggle_btn {
         display: block;
     }
 
   .dropdown_menu{display: block;}
+
+  /*for magazine og workshop sektion*/
+
+
+
 }
 
 @media(max-width:576px){ 
@@ -298,9 +328,20 @@ justify-self: center; margin-bottom: 50px;
 .dropdown_menu {left:2rem;
 width:unset;}
 
+}
 
 
+@media (min-width:1025px)and (max-width:1499px){
+    .image_magazine_sektion,.video_sektion{width:400px;}   
+     .picture_image{width:400px;height:340px;} 
+     video{height:200px; width:400px}   
+}
 
-
+@media (min-width:1500px)and (max-width:3000px){
+     .image_magazine_sektion,.video_sektion{width:37vw;}   
+         .picture_image{width:600px;height:400px;} 
+     video{height:300px; width:500px}   
+      .beskrivelse_af_magazinesektion,.beskrivelse_af_workshopsektion{width:60vw;}
+    
 }
 
