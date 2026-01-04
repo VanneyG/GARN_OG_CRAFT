@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #A3C29C;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.logo img {
+    width: 55px;
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.links a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 600;
+}
+
+.kurv {
+    height: 28px;
+}
+
+.action_btn {
+    background: orange;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+/* PRODUKTER */
+.product-section {
+    width: 90%;
+    margin: 3rem auto;
+}
+
+.product-section h2 {
+    margin-bottom: 1.5rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.product-card {
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-card p {
+    margin: 1rem 0;
+}
+
+.product-card button {
+    margin-top: auto;
+    background: #A3C29C;
+    border: none;
+    padding: 0.6rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background: #8fb089;
+}
+
+/*tilmed sektion */
+#tilmed{display: flex;flex-direction:row; flex-wrap: wrap;justify-content: space-between;align-items: center;}
+.tilmed_sektion{padding-top: 10px;padding-bottom: 10px; }
+.ikon_kasse{display: flex;margin-bottom:18px;}
+.alle_ikon_kasse{flex-grow: 1;flex-basis: 36%; flex-wrap: wrap; }
+.nyhedsbrev{display: flex;justify-content: center;align-items: center;flex-direction: column; flex-grow: 1; margin: 26px; 
+border:solid .5px grey ; border-radius: 7px; text-align: center;}
+.tilmed_besskrivelse{padding-right: 5%;}
+.findos_tittle,.tilmed_sektion ,.tilmed_besskrivelse {padding-left:5%;}
+.findos_ikon{height: 20px; width:auto;padding-right: 15px;}
+.godkend_button{width:60%;margin-top: 15px;height:42px;}
+
+footer{display:flex; flex-wrap: wrap;justify-content: space-between;}
+.help{flex-basis: 37%;display: flex; flex-wrap: nowrap;flex-direction: row;margin-top: 25px; flex-grow: 1; margin-bottom: 30px;}
+.social_media_ikon{width:40px; padding-right:9px;}
+.logo_footer{width:75px;}
+.kunderservice{margin-right: 15vw; margin-left:5%;}
+.social_media_ikon_kasse{display: flex;flex-direction: column;text-align: center;margin-left:10% ;margin-right: 20px;flex-grow: 1;
+    margin-top: 25px;
+
+ border:none; }
+
+
+/* RESPONSIV */
+@media (max-width: 992px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
