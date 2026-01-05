@@ -13,7 +13,7 @@ body{
 
 /*------------------------------------*/
 #search_image{ background-image:url(../billeder/search_billede.jpg); height: 450px;}
-#tilmed{ background-color:#A3C29C;}
+#tilmed{ background-color:#A3C29C;margin-top: 15px;}
 
 /*----------------------------------------*/
 
