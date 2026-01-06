@@ -4,8 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt os</title>
+    <link rel="stylesheet" href="css/kontakt_os.css">
+
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+
 </head>
 <body>
+    <header class="navbar"> <!-- first section -->
+
+            <div class="logo">
+                    <a href="#"><img src="billeder/logo.webp" alt="logo"></a>
+            </div>
+
+            <ul class="links"  >
+                <li><a href="garn_side.html" aria-label=" link til garn">Garn</a></li>
+                <li><a href="#">Opskrifter</a></li>
+                <li><a href="#">Kits og garnpakker</a></li>
+                <li><a href="#">Kursus og workshops</a></li>
+                  <li><a href="om_os.html">om os</a></li>
+                 <li><a href="#"><img src="billeder/ikons/shopping-cart.png" alt="indkøbskurv" class="kurv"></a></li>
+                
+            </ul>
+
+            <a href="#" class="action_btn"> <h4>kontakt os </h4></a>
+                 <div class="toggle_btn">
+                   <i class="fa-solid fa-bars"></i>
+                 </div>
+     
+        <ul class="dropdown_menu ">
+           
+              <li><a href="garn_side.html">Garn</a></li>
+                <li><a href="#">Opskrifter</a></li>
+                <li><a href="#">Kits og garnpakker</a></li>
+                <li><a href="#">Kursus og workshops</a></li>
+                  <li><a href="om_os.html">om os</a></li>
+                <li> <a href="#" class="action_btn2" >Kontakt os</a> </li>
+               
+                
+        </ul>
+    </header>  
+
+
+        <section id="tilmed">  <!-- fourth section -->
+       <!--first box _info -->  
+        <div class="tilmed_sektion alle_ikon_kasse">
+            <h3 class="findos_tittle">Find os</h3> <br>
+            <div class="ikon_kasse">
+                <img src="billeder/ikons/telefon_ikon.png" alt="telefon ikon" class="findos_ikon">
+                <h4> +45 11223344</h4>
+            </div>
+              <div class="ikon_kasse">
+                <img src="billeder/ikons/e-mail_ikon.png" alt="e-mail ikon" class="findos_ikon">
+                <h4> Garn&craft@gmail.com</h4>
+            </div>
+              <div class="ikon_kasse">
+                <img src="billeder/ikons/location.png" alt="lokation ikon" class="findos_ikon">
+                <h4> Låsbygade 42b, 6000 Kolding, Denmark </h4>
+            </div>
+
+        </div>
+      <!--Second box_ tilmed-->
+           <div class="tilmed_sektion nyhedsbrev">
+              <h3 >Tilmed dig vores nyhedsbrev</h3>
+              <p class="tilmed_besskrivelse">Udfyld formularen og hold dig opdateret på nyheder, via mail.</p>
+              <input type="text" placeholder="skriv fornavn">
+              <input type="text" placeholder="skriv e-mail">
+               <div class="se_alt godkend_button"> <h4>Godkend </h4> </div>
+
+           </div>
+
+
+    </section>
+    
+    <footer >
+<!--hjælplinker for kunder sektion-->
+        <div class="help">  
+             <section class="kunderservice">
+                 <h3>Kunderservice</h3>
+                 <p>Spørgsmål og svar <br>
+
+                  Kontakt os <br>
+
+                  Returnering <br>
+
+                  Levering og tracking</p>
+             </section>
+            <section class="din_konto">
+               <h3>Din konto</h3>
+              <p>Mine ordre <br>
+
+               Ønskeliste <br>
+
+              Mine oplysninger <br>
+
+             Login/Opret</p>
+             </section>
+            </div>
+
+<!--socialmedia ikon sektion -->
+<div class="social_media_ikon_kasse">
+    <div class="logo_socialmedia_footer">
+    <img src="billeder/logo.webp" alt="logo_ikon" class="logo_footer">
+    <h4>Find os på vores sociale medier</h4>
+    </div>
+    <div>
+        <img src="billeder/ikons/facebookicon.png" alt="facebook ikon" class="social_media_ikon">
+        <img src="billeder/ikons/instagramicon.png" alt="instagram ikon" class="social_media_ikon" >
+        <img src="billeder/ikons/pintorest.png" alt="pintorest ikon" class="social_media_ikon">
+    </div>
+</div>
+
+
+    </footer> 
+
+      <script>
+        const toggleBtn=document.querySelector('.toggle_btn')
+         const toggleBtnIcon=document.querySelector('.toggle_btn i')
+          const dropDownMenu=document.querySelector('.dropdown_menu')
+
+
+          toggleBtn.onclick= function()
+          {
+            dropDownMenu.classList.toggle('open')
+           const isOpen= dropDownMenu.classList.contains('open')
+
+           toggleBtnIcon.classList=isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars' 
+
+          }
+    </script>
     
 </body>
 </html>
