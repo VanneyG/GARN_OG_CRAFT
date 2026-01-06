@@ -1,6 +1,6 @@
 .tittle_sektion{background-color: #A3C29C ; display:flex; align-items: center; 
      height :60px; position: relative;justify-content: center; z-index: -1;}
-main{background-color:white;}
+main{background-color:white; width: 100%;}
 .navbar{background-color:white; }
 
 .fa-solid {color: black;}
@@ -13,5 +13,36 @@ main{background-color:white;}
 .validation{display: flex; flex-wrap: wrap; justify-content: space-around;align-items: center; flex-grow: 1;}
 
 /*2 billeder om om os */
-.to_billeder{display: flex;flex-wrap: nowrap;justify-content: space-between;}
+.to_billeder{display: flex; flex-wrap: wrap;justify-content: space-around; margin-top: 15px; flex-grow: 1;}
+.strikning_billede_omos, .beskrivelse_fordele_image{width:260px;height:250px; border-radius: 7px;padding-bottom: 15px;}
+
+/* beskrivelse af fordele */
+.beskrivelse_fordele{ background-color: #A3C29C; margin-bottom: 15px; min-height: 200px; /* position: relative; */ display: flex; justify-content: space-between;align-items: center;}
+.beskrivelse_fordele_image{height:200px; width:190px ; /*margin-left: 38%; */} 
+/*.text_fordel{ position: absolute; top:40px;} */
+
+
+
+
+
+
+
+@media (min-width:1023px)and (max-width:1440px){
+    .strikning_billede_omos{width:30%; height:370px;}
+}
+
+
+@media (min-width:1441px){
+    .strikning_billede_omos{width:20%; height:450px;}
+}
+
+
+
+
+
+
+
+
+
+
 
