@@ -1,6 +1,13 @@
-.tittle_sektion{background-color: aquamarine;}
-main{background-color: rgb(155, 155, 196);}
-.navbar{background-color: aliceblue;}
-.magnifying_glass, .kurv2{height: 25px;}
+.tittle_sektion{background-color: #A3C29C ; display:flex; align-items: center;  height :60px; position: relative;justify-content: center;}
+main{background-color:white;}
+.navbar{background-color:white; }
+
 .fa-solid {color: black;}
-.tittle_sektion{text-align: center;}
+
+/*title sektion  _second section "garn &craft + 2 ikons"*/
+.magnifying_glass, .kurv2{height: 20px; margin-right:.35vw;}
+.ikons_tittle_sektion_kasse{position: absolute;right:10px; top:38%;}
+
+/*validation sektion under title sektion*/
+.validation{display: flex; flex-wrap: wrap; justify-content: space-around;align-items: center; flex-grow: 1;}
+
