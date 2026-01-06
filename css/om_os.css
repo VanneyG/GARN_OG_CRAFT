@@ -1,4 +1,5 @@
-.tittle_sektion{background-color: #A3C29C ; display:flex; align-items: center;  height :60px; position: relative;justify-content: center;}
+.tittle_sektion{background-color: #A3C29C ; display:flex; align-items: center; 
+     height :60px; position: relative;justify-content: center; z-index: -1;}
 main{background-color:white;}
 .navbar{background-color:white; }
 
@@ -10,4 +11,7 @@ main{background-color:white;}
 
 /*validation sektion under title sektion*/
 .validation{display: flex; flex-wrap: wrap; justify-content: space-around;align-items: center; flex-grow: 1;}
+
+/*2 billeder om om os */
+.to_billeder{display: flex;flex-wrap: nowrap;justify-content: space-between;}
 
