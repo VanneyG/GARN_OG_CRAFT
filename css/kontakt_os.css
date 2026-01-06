@@ -1,1 +1,115 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
 
+
+body{
+  
+    min-height: 100vh;
+    width:100%;
+ 
+}
+
+.logo img{width:55px; height: auto;}
+
+
+.navbar{background-color: #A3C29C; 
+/*  position: relative; margin-bottom: 100PX; */
+ display: flex; align-items: center;justify-content: space-between; 
+ width:100%; /* margin:0 auto; */}
+ 
+.kurv{height:30px ;}
+ 
+
+/*------- navigation */
+
+li{ list-style:none ;}
+
+a{text-decoration: none;color: rgb(16, 13, 13);  font-size:2 rem;
+font-weight: 550;}
+
+  a:hover{ color: rgb(219, 115, 18);}
+
+
+
+.navbar .links { display: flex; gap: 2.5rem;}
+
+.navbar .toggle_btn{ color: white; /*burger menu color icon*/
+    font-size: 1.5rem; cursor:pointer;
+display: none;}
+
+.action_btn, .action_btn2{
+    background-color: rgb(255, 166, 2);
+    color:white ;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight:bolder;
+    cursor: pointer;
+}
+
+
+
+.action_btn:hover{ scale: 1.05;
+    color: white ;
+}
+
+.action_btn:active{scale:.95;
+    
+    }
+    
+/* dropdown menu */
+.dropdown_menu {
+   display: none; 
+    position:absolute;
+    right:2rem;
+    top:60px;
+    height: 0; /* Esto hace desaparecer la caja*/
+    width: 255px;
+    background:rgba(255, 255, 255, 0.1) ;
+    backdrop-filter:blur(15px) ;
+    border-radius: 10px;
+    overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+ 
+
+}
+
+  .dropdown_menu.open{height: 280px;} 
+
+
+.dropdown_menu li {
+    padding: .7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+.dropdown_menu .action_btn {width: 100%;
+display: flex; justify-content: center;}    
+
+
+
+
+/*tilmed sektion */
+#tilmed{display: flex;flex-direction:row; flex-wrap: wrap;justify-content: space-between;align-items: center;}
+.tilmed_sektion{padding-top: 10px;padding-bottom: 10px; }
+.ikon_kasse{display: flex;margin-bottom:18px;}
+.alle_ikon_kasse{flex-grow: 1;flex-basis: 36%; flex-wrap: wrap; }
+.nyhedsbrev{display: flex;justify-content: center;align-items: center;flex-direction: column; flex-grow: 1; margin: 26px; 
+border:solid .5px grey ; border-radius: 7px; text-align: center;}
+.tilmed_besskrivelse{padding-right: 5%;}
+.findos_tittle,.tilmed_sektion ,.tilmed_besskrivelse {padding-left:5%;}
+.findos_ikon{height: 20px; width:auto;padding-right: 15px;}
+.godkend_button{width:60%;margin-top: 15px;height:42px;}
+
+/*footer*/
+footer{display:flex; flex-wrap: wrap;justify-content: space-between;}
+.help{flex-basis: 37%;display: flex; flex-wrap: nowrap;flex-direction: row;margin-top: 25px; flex-grow: 1; margin-bottom: 30px;}
+.social_media_ikon{width:40px; padding-right:9px;}
+.logo_footer{width:75px;}
+.kunderservice{margin-right: 15vw; margin-left:5%;}
+.social_media_ikon_kasse{display: flex;flex-direction: column;text-align: center;margin-left:10% ;margin-right: 20px;flex-grow: 1;
+    margin-top: 25px;
+
+ border:none; }
