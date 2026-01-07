@@ -17,12 +17,26 @@ main{background-color:white; width: 100%;}
 .strikning_billede_omos, .beskrivelse_fordele_image{width:260px;height:250px; border-radius: 7px;padding-bottom: 15px;}
 
 /* beskrivelse af fordele */
-.beskrivelse_fordele{ background-color: #A3C29C; margin-bottom: 15px; min-height: 200px; /* position: relative; */ display: flex; justify-content: space-between;align-items: center;}
-.beskrivelse_fordele_image{height:200px; width:190px ; /*margin-left: 38%; */} 
-/*.text_fordel{ position: absolute; top:40px;} */
+.beskrivelse_fordele_set_plus_textkasse{display: flex; flex-wrap: wrap;  justify-content:center;}
+.kasse_beskrivelse_fordele{flex-basis:35%; margin:10px; flex-grow: 1; }
+.text_om_os {flex-basis: 50%; flex-grow: 1;margin:10px 30px 0 30px; padding-top: 7px;}
+
+/* inside each green box with text and a picture */
+.fordele_image{height:180px; width:200px ;object-fit: cover;} 
+.beskrivelse_fordele{ background-color: #A3C29C; margin-bottom: 15px;
+     height: 200px;
+      display:flex; justify-content: space-between;align-items: center;}
+
+.text_fordel{flex-grow: 1; display: flex; justify-content: center; padding-left:5px ; padding-right: 5px;}
 
 
 
+
+
+@media  (max-width:374px){
+    .fordele_image{height:170px; width:150px ;object-fit: cover;} 
+    
+}
 
 
 
