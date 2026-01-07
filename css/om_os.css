@@ -30,6 +30,21 @@ main{background-color:white; width: 100%;}
 .text_fordel{flex-grow: 1; display: flex; justify-content: center; padding-left:5px ; padding-right: 5px;}
 
 
+/*openhours sektion*/
+.openhours_sektion{display: flex; flex-wrap: wrap; width:100%; justify-content: space-around; margin-top: 15px;}
+.openhours{  object-fit: cover; padding-left: 10px; }
+.openhours_billede{width:35%;}
+.tider{background-color: rgb(255, 165, 0,.4);flex-basis: 50%; text-align: center;}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -37,19 +52,41 @@ main{background-color:white; width: 100%;}
     .fordele_image{height:170px; width:150px ;object-fit: cover;} 
     
 }
+@media (max-width:767px){
+    .strikning_billede_omos{width:80%; height:auto;}
+     .strikning_billede_omos2{display: none;}
+      
 
-
-
-
-@media (min-width:1023px)and (max-width:1440px){
-    .strikning_billede_omos{width:30%; height:370px;}
 }
 
 
-@media (min-width:1441px){
-    .strikning_billede_omos{width:20%; height:450px;}
+
+
+@media (min-width:768px) and (max-width:1024px){
+    .strikning_billede_omos{width:33vw; height:auto;
+    }
+    .fordele_image{ width:320px ;} 
+    .kasse_beskrivelse_fordele,.text_om_os{flex-basis: 45%;}
 }
 
+@media (min-width:1025px) and (max-width:1440px){
+    .strikning_billede_omos{width:28%; height:10%;}
+    .kasse_beskrivelse_fordele,.text_om_os{flex-basis: 45%;}
+    .openhours{height:150px;}
+
+  .openhours_billede{width:200px;}
+     .tider{flex-basis: 80%;}
+
+}
+
+@media (min-width:1441px) {
+    .strikning_billede_omos{width:17%; height:8%;}
+     .kasse_beskrivelse_fordele,.text_om_os{flex-basis: 45%;}
+     .openhours{height:150px; width:500px;}
+     .openhours_billede{width:500px;}
+     .tider{flex-basis: 75%;}
+    
+}
 
 
 
