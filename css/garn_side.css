@@ -12,7 +12,7 @@ body{
 
 #tilmed{ background-color:#A3C29C;}
 
-.navbar{background-color: #A3C29C; 
+.navbar{background-color: white; 
 /*  position: relative; margin-bottom: 100PX; */
  display: flex; align-items: center;justify-content: space-between; 
  width:100%; /* margin:0 auto; */}
@@ -33,7 +33,7 @@ font-weight: 550;}
 
 .navbar .links { display: flex; gap: 2.5rem;}
 
-.navbar .toggle_btn{ color: white; /*burger menu color icon*/
+.navbar .toggle_btn{ color: black; /*burger menu color icon*/
     font-size: 1.5rem; cursor:pointer;
 display: none;}
 
@@ -88,8 +88,32 @@ display: none;}
 
 .dropdown_menu .action_btn {width: 100%;
 display: flex; justify-content: center;} 
+/*-----------------info sektion-----------------*/
+.info-section{
+    width: 100%;
+    margin: 1rem auto;
+    text-align: center;
+    background-color: #A3C29C;
+    height: 60px;
+}
+.info-section h2{
+    padding: 15px;
+}
+/*-----------------sortering sektion-----------------*/
+.sortering-section{
+    width: 90%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: #A3C29C;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-/* PRODUKTER */
+/*---------PRODUKTER------------*/
 .product-section {
     width: 90%;
     margin: 3rem auto;
@@ -97,6 +121,7 @@ display: flex; justify-content: center;}
 
 .product-section h2 {
     margin-bottom: 1.5rem;
+    text-decoration: underline;
 }
 
 .product-grid {
@@ -199,4 +224,6 @@ footer{display:flex; flex-wrap: wrap;justify-content: space-between;}
 width:unset;}
 
 }
+
+
 
