@@ -10,7 +10,9 @@ main{background-color:white; width: 100%;}
 .ikons_tittle_sektion_kasse{position: absolute;right:10px; top:38%;}
 
 /*validation sektion under title sektion*/
-.validation{display: flex; flex-wrap: wrap; justify-content: space-around;align-items: center; flex-grow: 1;}
+.validation{display: flex; flex-wrap: wrap; justify-content: space-around;align-items: center;  margin-left: 10px;
+margin-right: 10px;margin-top: 3px; list-style: none; font-weight: bold;  }
+.validation li{padding-right: 15px; }
 
 /*2 billeder om om os */
 .to_billeder{display: flex; flex-wrap: wrap;justify-content: space-around; margin-top: 15px; flex-grow: 1;}
@@ -21,13 +23,15 @@ main{background-color:white; width: 100%;}
 .kasse_beskrivelse_fordele{flex-basis:35%; margin:10px; flex-grow: 1; }
 .text_om_os {flex-basis: 50%; flex-grow: 1;margin:10px 30px 0 30px; padding-top: 7px;}
 
-/* inside each green box with text and a picture */
+/* inside each green box with text and a picture  + text om os sektion*/
 .fordele_image{height:180px; width:200px ;object-fit: cover;} 
 .beskrivelse_fordele{ background-color: #A3C29C; margin-bottom: 15px;
      height: 200px;
       display:flex; justify-content: space-between;align-items: center;}
 
+
 .text_fordel{flex-grow: 1; display: flex; justify-content: center; padding-left:5px ; padding-right: 5px;}
+.tittle_text_om_os{font-weight: bold; font-size:18px;}
 
 
 /*openhours sektion*/
